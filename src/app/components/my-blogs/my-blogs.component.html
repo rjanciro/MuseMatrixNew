@@ -1,0 +1,13 @@
+<p>My Blogs</p>
+<section class="my-blogs">
+    <div class="posts-container">
+        <div class="post" *ngFor="let blog of blogs">
+            <img [src]="blog.img" alt="Post Image">
+            <h3>{{ blog.title }}</h3>
+            <p>{{ blog.content }}</p>
+            <p>Posted by: {{ blog.postedBy }} | Date: {{ blog.date }}</p>
+            <p>Tags: <span *ngFor="let tag of blog.tags; let last = last">{{ tag }}<span *ngIf="!last">, </span></span></p>
+            <p>Visibility: {{ blog.visibility }}</p>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,51 @@
+<div class="create-post">
+  <h2 class="title">Create a New Post</h2>
+  <form [formGroup]="postForm" class="form-horizontal">
+    <div class="left-column">
+      <div class="form-group">
+        <label for="name">Blog Title</label>
+        <input id="name" type="text" formControlName="name" class="form-control" />
+      </div>
+
+      <div class="form-group">
+        <label for="img">Image Link</label>
+        <input id="img" type="text" formControlName="img" class="form-control" />
+      </div>
+
+      <div class="form-group">
+        <label for="visibility">Audience</label>
+        <select id="visibility" formControlName="visibility" class="form-control">
+          <option value="public">Public</option>
+          <option value="private">Private</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="tags">Categories | Tags</label>
+        <div class="chip-container">
+          <span *ngFor="let tag of tags; let i = index" class="chip">
+            {{tag}}
+            <button type="button" class="chip-remove" (click)="remove(tag)">x</button>
+          </span>
+          <input id="tags" placeholder="New Tag..." (keyup.enter)="add($event)" class="form-control" />
+        </div>
+      </div>
+    </div>
+
+    <div class="right-column">
+      <div class="form-group">
+        <label for="content">Blog Content</label>
+        <editor
+          apiKey="ws9iobn7ry438y027msbll8230jakimcaq9jbxp5sk48i0gs"
+          formControlName="content"
+          [init]="{
+            plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount linkchecker',
+            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+          }"
+        ></editor>
+      </div>
+    </div>
+
+    <button type="button" class="btn btn-primary" [disabled]="!postForm.valid" (click)="createPost()">Post</button>
+  </form>
+</div>

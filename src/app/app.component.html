@@ -1,0 +1,21 @@
+<header class="header">
+  <div class="logo">
+    <img src="assets/icon.png" alt="" routerLink="/blogpage">
+    <span>MuseMatrix</span>
+  </div>
+  <nav class="nav">
+    <a href="/register" class="nav-link" *ngIf="!isLoggedIn">SIGN IN</a>
+    <a href="/blogpage" class="nav-link" *ngIf="isLoggedIn"><i class="fa fa-home"></i> HOME</a>
+    <a href="/myblogs" class="nav-link" *ngIf="isLoggedIn"><i class="fa fa-user"></i> MY POSTS</a>
+    <div class="settings-dropdown" *ngIf="isLoggedIn">
+      <a href="#" class="nav-link" (click)="toggleSettingsDropdown($event)">
+        <i class="fa fa-cog"></i> <span>SETTINGS</span>
+      </a>
+      <div class="dropdown-content" *ngIf="showSettingsDropdown">
+        <a href="/profile">Profile</a>
+        <a href="#" (click)="logout($event)">Logout</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<router-outlet></router-outlet>

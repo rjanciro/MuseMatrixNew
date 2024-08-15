@@ -1,0 +1,291 @@
+.trending-posts {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.trending-posts h2 {
+    color: #2c3e50;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.posts-container {
+    display: flex; 
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px; 
+}
+
+.post {
+    flex: 0 0 auto;
+    min-width: 200px;
+    border: 1px solid #ecf0f1;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #ffffff;
+    transition: box-shadow 0.3s;
+}
+
+.post:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow on hover */
+}
+
+.post img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.post h3 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+}
+
+.post p {
+    color: #666;
+    font-size: 14px;
+}
+
+.recent-posts {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.recent-posts h2 {
+    color: #2c3e50;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.recent-posts .post {
+    border: 1px solid #ecf0f1;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #ffffff;
+    transition: box-shadow 0.3s;
+}
+
+.recent-posts .post:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recent-posts .post img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.recent-posts .post h3 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+}
+
+.recent-posts .post p {
+    color: #666;
+    font-size: 14px;
+}
+
+.blog-page {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between content and sidebar */
+}
+
+.content {
+    flex: 1; /* Allow content to take available space */
+    padding: 20px;
+}
+
+.sidebar {
+    width: 250px; /* Fixed width for the sidebar */
+    padding: 20px;
+    background-color: #f9f9f9; /* Background color for sidebar */
+    border-left: 1px solid #ecf0f1; /* Border to separate from content */
+}
+
+.search-bar {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding for input */
+    margin-bottom: 20px; /* Space below the search bar */
+    border: 1px solid #ccc; /* Border for input */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.topics-list {
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+.topics-list li {
+    margin: 10px 0; /* Space between topics */
+    cursor: pointer; /* Pointer cursor for topics */
+    transition: color 0.3s; /* Transition for hover effect */
+    font-size: 16px; /* Adjust font size */
+    color: #333; /* Change text color */
+}
+
+.topics-list li:hover {
+    color: #007BFF; /* Change color on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+.create-post-button {
+    position: fixed; /* Fixed position */
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    background-color: #007BFF; /* Button color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px 25px; /* Larger padding for a bigger button */
+    font-size: 18px; /* Larger font size */
+    cursor: pointer; /* Pointer cursor */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.create-post-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+.latest-posts-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ccc;
+}
+
+.post-title {
+    margin: 0;
+    font-size: 18px;
+}
+
+.underline {
+    width: 50px;
+    height: 2px;
+    background-color: #007BFF;
+    margin-top: 5px;
+}
+
+.card-content {
+    padding: 10px;
+}
+
+.post-img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.card-body {
+    margin-top: 10px;
+}
+
+.card-subtitle {
+    padding: 10px;
+    font-size: 14px;
+    color: #666;
+    border-top: 1px solid #ccc;
+}
+
+.chip-set {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.chip {
+    background-color: #007BFF;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.card-actions {
+    padding: 10px;
+    text-align: right;
+}
+
+.btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.views {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    color: #666;
+}
+
+.image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-modal-content {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal-img {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 10px;
+}

@@ -1,0 +1,36 @@
+<section class="blog-page">
+    <div class="content">
+        <section class="trending-posts">
+            <h2>Trending Post</h2>
+            <div class="posts-container">
+                <div class="post" *ngFor="let blog of blogs">
+                    <img [src]="blog.img" alt="Post Image">
+                    <h3>{{ blog.title }}</h3>
+                    <p>{{ blog.content }}</p>
+                    <p>Posted by: {{ blog.postedBy }} | Date: {{ blog.date }}</p>
+                    <p>Tags: <span *ngFor="let tag of blog.tags; let last = last">{{ tag }}<span *ngIf="!last">, </span></span></p>
+                    <p>Visibility: {{ blog.visibility }}</p>
+                </div>
+            </div>
+            <a routerLink="/create-post" class="create-post-button">Create Post</a>
+        </section>
+
+        <section class="recent-posts">
+            <h2>Recent Posts</h2>
+            <div class="post" *ngFor="let recent of recentBlogs">
+                <img [src]="recent.img" alt="Post Image">
+                <h3>{{ recent.title }}</h3>
+                <p>{{ recent.content }}</p>
+                <p>Posted by: {{ recent.postedBy }} | Date: {{ recent.date }}</p>
+                <a href="#">Read More</a>
+            </div>
+        </section>
+    </div>
+
+    <aside class="sidebar">
+        <input type="text" placeholder="Search..." class="search-bar">
+        <h3>Topics</h3>
+        <ul class="topics-list">
+        </ul>
+    </aside>
+</section>
